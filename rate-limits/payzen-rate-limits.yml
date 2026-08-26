@@ -1,0 +1,25 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Sweep of every reachable PayZen surface on 2026-08-26 for published rate limits. PayZen
+  publishes no developer portal, no API reference and no machine-readable contract, so no
+  limits, windows, burst allowances or response headers are documented anywhere public.
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status_code: null
+note: >-
+  An honest zero, not an assertion that the API is unlimited. PayZen's own status page
+  monitors a service named "API" (https://status.payzen.com/), so an API exists — but its
+  runtime limits are only visible to contracted health systems. No X-RateLimit-*,
+  RateLimit-* or Retry-After behaviour could be observed because there is no reachable
+  unauthenticated endpoint to call: api.payzen.com and developer.payzen.com do not resolve
+  in DNS.
+evidence:
+- url: https://payzen.com/llms.txt
+  status: 200
+  detail: Yoast-generated page index; lists marketing pages only, no developer reference.
+- url: https://payzen.com/docs
+  status: 404
+- url: https://app.payzen.com/openapi.json
+  status: 404

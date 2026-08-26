@@ -1,0 +1,27 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  Sweep of payzen.com for a pricing or plans page on 2026-08-26. https://payzen.com/pricing/
+  returns 404; no /plans/, /packages/ or in-page price table exists anywhere on the site,
+  and the site nav offers "Get a demo" in place of pricing.
+plan_count: 0
+plans: []
+pricing_model: >-
+  Not published. PayZen is sold as an enterprise engagement to hospitals and health
+  systems: the provider is paid up front for the receivable and PayZen carries the
+  patient's interest-free, fee-free instalment plan, taking a discount/fee on the
+  receivable. Neither that discount rate nor any per-transaction or API price is stated
+  publicly. PayZen's patient-facing pages state the patient side explicitly — "no
+  interest, no fees" — but that is a consumer term, not a plan.
+note: >-
+  There is no self-serve tier, no free tier, and no API price list. An honest zero: this
+  provider publishes no plans at all, contact-sales only.
+evidence:
+- url: https://payzen.com/pricing/
+  status: 404
+- url: https://payzen.com/contact/
+  status: 200
+  detail: Demo-request form stands in for pricing.
+- url: https://payzen.com/for-patients/
+  status: 200
+  detail: States the patient-side terms (interest-free, fee-free), not provider pricing.

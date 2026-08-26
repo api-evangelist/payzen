@@ -1,0 +1,71 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Direct HTTPS probes of every host associated with PayZen on 2026-08-26. PayZen publishes
+  no /.well-known/ documents on any reachable host. payzen.com is a WordPress marketing
+  site that answers every unknown /.well-known/ path with its themed 404 page (HTTP 404,
+  ~70KB of HTML); app.payzen.com is an nginx origin that answers with a bare nginx 404.
+  No WellKnown or SecurityTxt pointer is emitted, because nothing returned a document.
+note: >-
+  developer.payzen.com and api.payzen.com do not resolve in DNS, so there is no API host
+  to probe. docs.payzen.com resolves (CNAME app.staging.payzen.com) but 302s into a
+  staging application host, not a documentation site — see x-coverage.
+hosts:
+- host: payzen.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/mcp.json
+    status: 404
+    file: null
+- host: app.payzen.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/mcp.json
+    status: 404
+    file: null

@@ -1,0 +1,50 @@
+generated: '2026-08-26'
+method: searched
+source: https://payzen.com/payzen-compliance/
+trust_center:
+  url: https://app.vanta.com/payzen/trust
+  platform: Vanta
+  status: 200
+  note: >-
+    Linked from PayZen's own Security & Compliance page as "Go to the trust portal". The
+    Vanta portal answers 200 but serves a client-side shell (~5KB, no server-rendered
+    content), so the certification list below is read from PayZen's own compliance page
+    rather than from the portal HTML.
+certifications:
+- name: SOC 2 Type II
+  status: certified
+  scope: PayZen platform
+  evidence: https://payzen.com/payzen-compliance/
+  note: >-
+    PayZen announced SOC 2 Type II certification publicly in 2022; the compliance page
+    carries a "SOC2 CERTIFICATION" section. Report availability is not stated publicly.
+- name: HIPAA
+  status: compliant
+  scope: patient and provider information handled by the platform
+  evidence: https://payzen.com/payzen-compliance/
+  note: >-
+    Self-attested on the compliance page ("our systems are built to meet strict HIPAA
+    requirements"). HIPAA has no certification body; treat as a program claim, not a cert.
+licensing:
+- registry: NMLS (Nationwide Multistate Licensing System)
+  entity: PayZen LLC
+  identifier: '2591891'
+  evidence: https://payzen.com/payzen-compliance/
+not_found:
+- ISO 27001
+- PCI DSS
+- HITRUST
+- FedRAMP
+- published subprocessor list
+- named security contact / security@ address
+- vulnerability disclosure or bug bounty policy
+evidence:
+- url: https://payzen.com/payzen-compliance/
+  status: 200
+  kind: provider compliance page
+- url: https://app.vanta.com/payzen/trust
+  status: 200
+  kind: Vanta trust portal (JS-rendered shell)
+- url: https://payzen.com/.well-known/security.txt
+  status: 404
+  kind: negative probe

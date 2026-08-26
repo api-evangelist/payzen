@@ -1,17 +1,32 @@
 aid: payzen
 name: PayZen
-description: 'PayZen is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  PayZen is a San Francisco-based healthcare fintech that provides AI-powered patient
+  financing — "Care Now, Pay Later" — for hospitals, health systems and large physician
+  groups. Its platform underwrites each patient's ability to pay and issues interest-free,
+  fee-free monthly payment plans and a white-labelable Care Card, with the provider paid
+  up front. PayZen markets pre-built integrations with Epic, Cerner and other major EHR
+  systems and is listed on Epic's Showroom (formerly App Orchard) marketplace, but it
+  publishes no public developer portal, API reference or machine-readable contract: the
+  integration surface is delivered to contracted health systems through the EHR
+  marketplace and an implementation engagement. PayZen LLC is a licensed lender (NMLS
+  2591891), is SOC 2 Type II certified and operates a Vanta trust portal.
 url: https://raw.githubusercontent.com/api-evangelist/payzen/refs/heads/main/apis.yml
+image: https://payzen.com/wp-content/uploads/2023/10/cropped-cropped-payzen-favicon-3-192x192.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Payments
+- Healthcare
+- Patient Financing
+- Revenue Cycle Management
+- Lending
+- Fintech
+- Electronic Health Records
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,53 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/payzen-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/payzen-stock
+  url: https://payzen.com/
+- type: Blog
+  url: https://payzen.com/blog/
+- type: Support
+  url: https://payzen.com/contact/
+- type: PrivacyPolicy
+  url: https://payzen.com/privacy/
+- type: StatusPage
+  url: https://status.payzen.com/
+- type: LLMsTxt
+  url: llms/payzen-llms.txt
+- type: TrustCenter
+  url: security/payzen-trust-center.yml
+- type: Compliance
+  url: security/payzen-trust-center.yml
+- type: Conformance
+  url: conformance/payzen-conformance.yml
+- type: Lifecycle
+  url: lifecycle/payzen-lifecycle.yml
+- type: Plans
+  url: plans/payzen-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/payzen-rate-limits.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: marketplace-only
+  detail: >-
+    PayZen's own status page monitors business services literally named "API" and
+    "Webhooks", but the only place that integration surface is listed is Epic's Showroom
+    marketplace, which is a login-gated React application; payzen.com has no developer
+    section, api.payzen.com and developer.payzen.com do not resolve in DNS, and
+    docs.payzen.com 302s into a staging app host rather than documentation.
+  evidence:
+  - url: https://status.payzen.com/
+    status: 200
+  - url: https://payzen.com/docs
+    status: 404
+  - url: https://showroom.epic.com/Search?q=PayZen
+    status: 200
+  - url: https://docs.payzen.com/docs/
+    status: 302
+  checked: '2026-08-26'

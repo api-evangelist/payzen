@@ -1,0 +1,25 @@
+generated: '2026-08-26'
+method: probed
+source: https://status.payzen.com/
+status: evidence-only
+event_count: 0
+events: []
+note: >-
+  PayZen operates a webhook surface — its own public PagerDuty status page monitors a
+  business service named "Webhooks" (id PIS6ZQ6) alongside one named "API" (id PM1UA2W).
+  That is provider-published evidence the surface EXISTS. PayZen publishes no event
+  catalog, no AsyncAPI, no payload schemas and no subscription documentation anywhere a
+  member of the public can reach, so there is nothing to describe. This file records the
+  evidence of existence and deliberately carries NO events[] and NO apis.yml Webhooks
+  pointer: a Webhooks pointer asserts a documented webhook surface, and PayZen has not
+  documented one. Re-check if PayZen ever publishes a developer portal.
+evidence:
+- url: https://status.payzen.com/
+  status: 200
+  detail: >-
+    Embedded status-page JSON declares business_services [Care Card, Post Service, API,
+    Webhooks].
+- url: https://payzen.com/asyncapi.yaml
+  status: 404
+- url: https://payzen.com/.well-known/api-catalog
+  status: 404

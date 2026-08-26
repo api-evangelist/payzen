@@ -1,0 +1,60 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  PayZen's own public pages (payzen.com/payzen-compliance/, /platform/, /card/) plus live
+  probes. PayZen publishes no OpenAPI, AsyncAPI, GraphQL SDL, WSDL or .proto, so every
+  contract-level assertion below is recorded as unknown rather than guessed.
+standards:
+- id: hipaa
+  name: HIPAA (US health information privacy and security)
+  conforms: true
+  evidence: >-
+    "PayZen prioritizes safeguarding healthcare data as a fully HIPAA compliant
+    institution" — https://payzen.com/payzen-compliance/ (200). Provider self-attestation.
+- id: soc2-type-ii
+  name: AICPA SOC 2 Type II
+  conforms: true
+  evidence: >-
+    "SOC2 CERTIFICATION" section on https://payzen.com/payzen-compliance/ (200), and a
+    2022 public announcement of SOC 2 Type II certification.
+- id: nmls-lending-licensure
+  name: NMLS state lending licensure
+  conforms: true
+  evidence: >-
+    PayZen LLC NMLS ID 2591891, published on https://payzen.com/payzen-compliance/ (200).
+- id: hl7-fhir
+  name: HL7 FHIR
+  conforms: unknown
+  evidence: >-
+    PayZen markets "pre-built integrations with Epic, Cerner and other major EHR systems"
+    (https://payzen.com/platform/, 200) and is listed on Epic Showroom, which is a
+    FHIR-based integration programme — but PayZen publishes no capability statement,
+    resource list or spec of its own, so FHIR conformance cannot be established.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: unknown
+  evidence: >-
+    No OAuth metadata served: /.well-known/oauth-authorization-server and
+    /.well-known/openid-configuration both 404 on payzen.com and app.payzen.com.
+- id: rfc9457
+  name: RFC 9457 Problem Details
+  conforms: unknown
+  evidence: No public contract or error reference to read.
+- id: rfc8594
+  name: RFC 8594 Sunset header / deprecation signalling
+  conforms: unknown
+  evidence: No public API or deprecation policy published.
+domain_standards:
+  checked:
+  - hl7-fhir
+  - hl7v2
+  - x12-835-837
+  - ncpdp
+  found: []
+  note: >-
+    PayZen sits in two regimes with real domain standards — healthcare (FHIR, HL7v2, X12
+    835/837 remittance and claim messages) and consumer lending. Its integrations are
+    marketed as EHR-native and it appears on Epic Showroom, so a FHIR or X12 signature is
+    plausible, but nothing in PayZen's public surface DECLARES one, and this pipeline does
+    not award a domain standard on plausibility. Re-check if PayZen ever publishes a
+    contract.

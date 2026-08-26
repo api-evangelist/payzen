@@ -1,0 +1,48 @@
+generated: '2026-08-26'
+method: searched
+source: >-
+  https://status.payzen.com/ (PagerDuty-hosted public status page, HTTP 200) plus a sweep
+  of payzen.com for versioning, deprecation, SLA and changelog pages.
+status_page:
+  url: https://status.payzen.com/
+  provider: PagerDuty Status
+  status_page_id: PU2H33Y
+  public: true
+  http_status: 200
+  headline: Everything is running smoothly
+  subscribe: [email, slack, webhook]
+  monitored_services:
+  - name: Care Card
+    id: P6EWAUC
+  - name: Post Service
+    id: P358ZFP
+  - name: API
+    id: PM1UA2W
+  - name: Webhooks
+    id: PIS6ZQ6
+  note: >-
+    The status page is the strongest public evidence that PayZen operates an API and a
+    webhook surface: it monitors business services literally named "API" and "Webhooks".
+    Neither is documented anywhere on PayZen's public site.
+versioning:
+  scheme: unknown
+  current_version: null
+  evidence: No public versioning policy, changelog or API reference found on payzen.com.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  evidence: >-
+    No deprecation or sunset policy page exists on payzen.com; no contract to derive
+    deprecated operations from.
+sla:
+  published: false
+  evidence: >-
+    No public SLA or uptime commitment. The status page publishes current state but no
+    historical uptime target.
+changelog:
+  published: false
+  evidence: >-
+    payzen.com/blog/ and payzen.com/news/ are marketing/press feeds, not a dated product
+    or API changelog.
+deprecated_operations: []
