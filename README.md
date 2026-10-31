@@ -64,5 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PayZen is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.hiive.com/securities/payzen-stock
+PayZen is a San Francisco-based healthcare fintech that provides AI-powered patient financing — "Care Now, Pay Later" — for hospitals, health systems and large physician groups. Its platform underwrites each patient's ability to pay and issues interest-free, fee-free monthly payment plans and a white-labelable Care Card, with the provider paid up front. PayZen markets pre-built integrations with Epic, Cerner and other major EHR systems and is listed on Epic's Showroom (formerly App Orchard) marketplace, but it publishes no public developer portal, API reference or machine-readable contract: the integration surface is delivered to contracted health systems through the EHR marketplace and an implementation engagement. PayZen LLC is a licensed lender (NMLS 2591891), is SOC 2 Type II certified and operates a Vanta trust portal.
+
+**Areas:** Company · Payments · Healthcare · Patient Financing · Revenue Cycle Management · Lending · Fintech · Electronic Health Records
+
+## PayZen on APIs.io
+
+Everything profiled for PayZen is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/payzen/](https://apis.io/providers/payzen/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Payzen Webhooks](https://apis.io/asyncapis/payzen/payzen-webhooks/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Payzen Domain Security](https://apis.io/security/payzen/payzen-domain-security/)
+- [Payzen Trust Center](https://apis.io/security/payzen/payzen-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Payzen Plans Pricing](https://apis.io/plans/payzen/payzen-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Payzen Rate Limits](https://apis.io/rate-limits/payzen/payzen-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://payzen.com/)
+- [Support](https://payzen.com/contact/)
+- [Blog](https://payzen.com/blog/)
+- [Privacy policy](https://payzen.com/privacy/)
+- [Status](https://status.payzen.com/)
+
+## API Evangelist rating
+
+**Kin Score 25.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 26.3 |
+
+**Agent readiness 19.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.6** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/payzen/](https://apis.io/providers/payzen/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PayZen: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/payzen/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
